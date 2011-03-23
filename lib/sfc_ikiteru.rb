@@ -1,13 +1,14 @@
 require 'ping'
 
 module SfcIkiteru
-  VERSION = '0.0.2'
+  VERSION = '0.0.3'
   def SfcIkiteru.servers
     [
      {:host => 'web.sfc.keio.ac.jp', :service => 'echo'},
      {:host => 'ccz01.sfc.keio.ac.jp', :service => 'echo'},
      {:host => 'ccz02.sfc.keio.ac.jp', :service => 'echo'},
      {:host => 'mail.sfc.keio.ac.jp', :service => 'echo'},
+     {:host => 'www.mag.keio.ac.jp', :service => 'echo'},
      {:host => 'masui.sfc.keio.ac.jp', :service => 'http'}
     ]
   end
