@@ -1,0 +1,14 @@
+History.txt
+Manifest.txt
+README.rdoc
+Rakefile
+lib/sfc_ikiteru.rb
+script/console
+script/destroy
+script/generate
+spec/sfc_ikiteru_spec.rb
+spec/spec.opts
+spec/spec_helper.rb
+tasks/rspec.rake
+samples/sample.rb
+
