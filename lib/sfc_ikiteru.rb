@@ -1,7 +1,7 @@
 require 'ping'
 
 module SfcIkiteru
-  VERSION = '0.0.1'
+  VERSION = '0.0.2'
   def SfcIkiteru.servers
     [
      {:host => 'web.sfc.keio.ac.jp', :service => 'echo'},

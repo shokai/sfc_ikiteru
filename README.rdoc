@@ -14,6 +14,22 @@ check status of Keio Univ SFC.
     p per
     p details
 
+== TOOL:
+
+check status on CUI.
+
+    % sfc_ikiteru
+
+
+results
+
+    sfc_ikiteru => 生存率 100%
+    web.sfc.keio.ac.jp => 正常です
+    ccz01.sfc.keio.ac.jp => 正常です
+    ccz02.sfc.keio.ac.jp => 正常です
+    mail.sfc.keio.ac.jp => 正常です
+    masui.sfc.keio.ac.jp => 正常です
+
 
 == REQUIREMENTS:
 
