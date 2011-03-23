@@ -13,7 +13,8 @@ Hoe.plugin :newgem
 $hoe = Hoe.spec 'sfc_ikiteru' do
   self.developer 'Sho Hashimoto', 'hashimoto@shokai.org'
   self.rubyforge_name       = self.name # TODO this is default value
-  # self.extra_deps         = [['activesupport','>= 2.0.2']]
+  #self.extra_deps         = [['activesupport','>= 2.0.2']]
+  self.extra_deps         = [['rainbow']]
 
 end
 

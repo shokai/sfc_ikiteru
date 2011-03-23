@@ -1,0 +1,23 @@
+#!/usr/bin/env ruby
+# -*- coding: utf-8 -*-
+require 'rubygems'
+#require File.dirname(__FILE__)+'/../lib/sfc_ikiteru'
+require 'sfc_ikiteru'
+require 'rainbow'
+
+per, details = SfcIkiteru.ikiteru
+
+print 'sfc_ikiteru => '
+if per == 1
+  puts "生存率 #{(per*100).to_i}%".color(:green)
+else
+  puts "生存率 #{(per*100).to_i}%".color(:magenta)
+end
+details.each{|i|
+  print "#{i[:host]} => "
+  if(i[:ping])
+    puts "正常です".color(:green)
+  else
+    puts "応答なし".color(:red)
+  end
+}

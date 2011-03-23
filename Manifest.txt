@@ -11,4 +11,4 @@ spec/spec.opts
 spec/spec_helper.rb
 tasks/rspec.rake
 samples/sample.rb
-
+bin/sfc_ikiteru

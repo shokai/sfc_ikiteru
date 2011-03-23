@@ -10,7 +10,9 @@ check status of Keio Univ SFC
 == SYNOPSIS:
 
     require 'sfc_ikiteru'
-    p SfcIkiteru.ikiteru
+    per, details = SfcIkiteru.ikiteru
+    p per
+    p details
 
 
 == REQUIREMENTS:
