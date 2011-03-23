@@ -6,21 +6,20 @@
 
 check status of Keio Univ SFC
 
-== FEATURES/PROBLEMS:
-
-* FIX (list of features or problems)
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+    require 'sfc_ikiteru'
+    p SfcIkiteru.ikiteru
+
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* Ruby 1.8.7
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+* gem install sfc_ikiteru
 
 == LICENSE:
 
