@@ -4,7 +4,7 @@
 
 == DESCRIPTION:
 
-check status of Keio Univ SFC
+check status of Keio Univ SFC.
 
 
 == SYNOPSIS:
