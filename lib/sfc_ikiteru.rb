@@ -5,12 +5,12 @@ require 'timeout'
 require 'eventmachine'
 
 module SfcIkiteru
-  VERSION = '0.0.5'
+  VERSION = '0.0.6'
   def SfcIkiteru.servers
     [
      {:host => 'web.sfc.keio.ac.jp', :service => 'echo'},
-     {:host => 'ccz01.sfc.keio.ac.jp', :service => 'echo'},
-     {:host => 'ccz02.sfc.keio.ac.jp', :service => 'echo'},
+     {:host => 'ccz01.sfc.keio.ac.jp', :service => 'ssh'},
+     {:host => 'ccz02.sfc.keio.ac.jp', :service => 'ssh'},
      {:host => 'mail.sfc.keio.ac.jp', :service => 'echo'},
      {:host => 'www.mag.keio.ac.jp', :service => 'echo'},
      {:host => 'masui.sfc.keio.ac.jp', :service => 'http'}
