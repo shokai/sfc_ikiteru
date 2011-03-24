@@ -5,7 +5,7 @@ require 'timeout'
 require 'eventmachine'
 
 module SfcIkiteru
-  VERSION = '0.0.4'
+  VERSION = '0.0.5'
   def SfcIkiteru.servers
     [
      {:host => 'web.sfc.keio.ac.jp', :service => 'echo'},
@@ -21,18 +21,18 @@ module SfcIkiteru
     results = Array.new
 
     EM::run do
-      servers.each{|s|
-        EM::defer do
-          res = ping(s[:host], timeout, s[:service])
-          results << {:host => s[:host], :ping => res}
-        end
-      }
       EM::defer do
         loop do
           EM::stop if results.size >= servers.size
           sleep 0.1
         end
       end
+      servers.each{|s|
+        EM::defer do
+          res = ping(s[:host], timeout, s[:service])
+          results << {:host => s[:host], :ping => res}
+        end
+      }
     end
     count = 0
     results.each{|i|

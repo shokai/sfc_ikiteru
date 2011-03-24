@@ -6,6 +6,10 @@
 
 check status of Keio Univ SFC.
 
+== INSTALL:
+
+* gem install sfc_ikiteru
+
 
 == SYNOPSIS:
 
@@ -13,6 +17,7 @@ check status of Keio Univ SFC.
     per, details = SfcIkiteru.ikiteru
     p per
     p details
+
 
 == TOOL:
 
@@ -33,11 +38,7 @@ results
 
 == REQUIREMENTS:
 
-* Ruby 1.8.7
-
-== INSTALL:
-
-* gem install sfc_ikiteru
+* Ruby 1.8.7 or 1.9.2
 
 == LICENSE:
 
