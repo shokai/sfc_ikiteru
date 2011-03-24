@@ -1,7 +1,11 @@
-require 'ping'
+# -*- coding: utf-8 -*-
+require 'rubygems'
+require 'socket'
+require 'timeout'
+require 'eventmachine'
 
 module SfcIkiteru
-  VERSION = '0.0.3'
+  VERSION = '0.0.4'
   def SfcIkiteru.servers
     [
      {:host => 'web.sfc.keio.ac.jp', :service => 'echo'},
@@ -15,14 +19,39 @@ module SfcIkiteru
 
   def SfcIkiteru.ikiteru(timeout=3)
     results = Array.new
-    servers.each{|s|
-      results << {:host => s[:host], :ping => Ping.pingecho(s[:host], timeout, s[:service])}
-    }
+
+    EM::run do
+      servers.each{|s|
+        EM::defer do
+          res = ping(s[:host], timeout, s[:service])
+          results << {:host => s[:host], :ping => res}
+        end
+      }
+      EM::defer do
+        loop do
+          EM::stop if results.size >= servers.size
+          sleep 0.1
+        end
+      end
+    end
     count = 0
     results.each{|i|
       count+=1 if i[:ping] == true
     }
     per = count.to_f / results.size
     return per, results
+  end
+
+  def SfcIkiteru.ping(host, timeout=5, service="echo")
+    begin
+      timeout(timeout) do
+        TCPSocket.new(host, service).close
+      end
+    rescue Errno::ECONNREFUSED
+      return true
+    rescue Timeout::Error, StandardError
+      return false
+    end
+    return true
   end
 end
