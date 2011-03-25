@@ -16,7 +16,7 @@ module SfcIkiteru
      {:host => 'cpu0.mag.keio.ac.jp', :service => 'echo'},
      {:host => 'gw2.sfc.keio.ac.jp', :service => 'echo'},
      {:host => 'keio.gw.sinet.ad.jp', :service => 'echo'},
-     {:host => 'shonan.sfc.wide.ad.jp', :service => 'echo'},
+     {:host => 'shonan.sfc.wide.ad.jp', :service => 'http'},
      {:host => 'masui.sfc.keio.ac.jp', :service => 'http'}
     ]
   end
