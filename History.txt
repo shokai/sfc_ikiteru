@@ -1,3 +1,11 @@
+=== 0.0.7 2011-03-25
+
+* add servers
+  * cpu0.mag.keio.ac.jp
+  * gw2.sfc.keio.ac.jp
+  * keio.gw.sinet.ad.jp
+  * shonan.sfc.wide.ad.jp
+
 === 0.0.6 2011-03-24
 
 * use ssh port to check ccz01,02
